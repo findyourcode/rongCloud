@@ -29,5 +29,10 @@
     "psr-4": {
       "RongCloud\\": "tests/RongCloud"
     }
+  },
+  "extra": {
+	"branch-alias": {
+		"dev-master": "1.0-dev"
+	}
   }
 }
