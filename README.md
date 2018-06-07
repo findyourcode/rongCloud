@@ -10,6 +10,7 @@ $ composer require findyourcode/rongcloud
 ```
 
 * 直接下载安装，SDK 没有依赖其他第三方库，可直接下载引入使用。
+* 直接抛出异常,SDK不再自行打印异常
 
 ## 使用方法
 ```php
@@ -25,9 +26,9 @@ $jsonPath = "jsonsource/";
 
 ## 联系我们
 - 如果希望帮助，请提交[工单](http://developer.rongcloud.cn/ticket), 或者 mailto:support.rongcloud.cn
-- 如果发现了bug， 欢迎提交 [issue](https://github.com/rongcloud/server-sdk-php-composer)
+- 如果发现了bug， 欢迎提交 [issue](https://github.com/findyourcode/rongCloud/issues)
 - 如果要提交代码，欢迎提交 pull request
 
 ## 代码许可
 
-The MIT License (MIT).详情见 [License文件](https://github.com/qiniu/php-sdk/blob/master/LICENSE).
+The MIT License (MIT).
