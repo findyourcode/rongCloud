@@ -23,7 +23,9 @@ class User
      * @param  portraitUri:用户头像 URI，最大长度 1024 字节.用来在 Push 推送时显示用户的头像。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function getToken($userId, $name, $portraitUri)
     {
         if (empty($userId))
@@ -57,7 +59,9 @@ class User
      * @param  portraitUri:用户头像 URI，最大长度 1024 字节。用来在 Push 推送时显示。（可选，提供即刷新，不提供忽略）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function refresh($userId, $name = '', $portraitUri = '')
     {
         if (empty($userId))
@@ -83,7 +87,9 @@ class User
      * @param  userId:用户 Id，最大长度 64 字节。是用户在 App 中的唯一标识码，必须保证在同一个 App 内不重复，重复的用户 Id 将被当作是同一用户。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function checkOnline($userId)
     {
         if (empty($userId))
@@ -108,7 +114,9 @@ class User
      * @param  minute:封禁时长,单位为分钟，最大值为43200分钟。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function block($userId, $minute)
     {
         if (empty($userId))
@@ -136,7 +144,9 @@ class User
      * @param  userId:用户 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function unBlock($userId)
     {
         if (empty($userId))
@@ -158,7 +168,9 @@ class User
      *
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function queryBlock()
     {
 
@@ -178,7 +190,9 @@ class User
      * @param  blackUserId:被加到黑名单的用户Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function addBlacklist($userId, $blackUserId)
     {
         if (empty($userId))
@@ -205,7 +219,9 @@ class User
      * @param  userId:用户 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function queryBlacklist($userId)
     {
         if (empty($userId))
@@ -230,7 +246,9 @@ class User
      * @param  blackUserId:被移除的用户Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function removeBlacklist($userId, $blackUserId)
     {
         if (empty($userId))

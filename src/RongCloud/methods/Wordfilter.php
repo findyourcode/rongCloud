@@ -21,7 +21,9 @@ class Wordfilter
      * @param  word:敏感词，最长不超过 32 个字符。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function add($word)
     {
         if (empty($word))
@@ -43,7 +45,9 @@ class Wordfilter
      *
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function getList()
     {
 
@@ -61,7 +65,9 @@ class Wordfilter
      * @param  word:敏感词，最长不超过 32 个字符。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function delete($word)
     {
         if (empty($word))

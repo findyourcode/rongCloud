@@ -23,7 +23,9 @@ class Group
      * @param  groupName:群组 Id 对应的名称。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function create($userId, $groupId, $groupName)
     {
         if (empty($userId))
@@ -55,7 +57,9 @@ class Group
      * @param  groupInfo:该用户的群信息，如群 Id 已经存在，则不会刷新对应群组名称，如果想刷新群组名称请调用刷新群组信息方法。
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function sync($userId, $groupInfo)
     {
         if (empty($userId))
@@ -85,7 +89,9 @@ class Group
      * @param  groupName:群名称。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function refresh($groupId, $groupName)
     {
         if (empty($groupId))
@@ -114,7 +120,9 @@ class Group
      * @param  groupName:要加入的群 Id 对应的名称。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function join($userId, $groupId, $groupName)
     {
         if (empty($userId))
@@ -145,7 +153,9 @@ class Group
      * @param  groupId:群组Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function queryUser($groupId)
     {
         if (empty($groupId))
@@ -170,7 +180,9 @@ class Group
      * @param  groupId:要退出的群 Id.（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function quit($userId, $groupId)
     {
         if (empty($userId))
@@ -200,7 +212,9 @@ class Group
      * @param  minute:禁言时长，以分钟为单位，最大值为43200分钟。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function addGagUser($userId, $groupId, $minute)
     {
         if (empty($userId))
@@ -231,7 +245,9 @@ class Group
      * @param  groupId:群组Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function lisGagUser($groupId)
     {
         if (empty($groupId))
@@ -255,7 +271,9 @@ class Group
      * @param  groupId:群组Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function rollBackGagUser($userId, $groupId)
     {
         if (empty($userId))
@@ -283,7 +301,9 @@ class Group
      * @param  groupId:要解散的群 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function dismiss($userId, $groupId)
     {
         if (empty($userId))

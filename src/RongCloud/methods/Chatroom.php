@@ -21,7 +21,9 @@ class Chatroom
      * @param  chatRoomInfo:id:要创建的聊天室的id；name:要创建的聊天室的name。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function create($chatRoomInfo)
     {
         if (empty($chatRoomInfo))
@@ -49,7 +51,9 @@ class Chatroom
      * @param  chatroomId:要加入的聊天室 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function join($userId, $chatroomId)
     {
 
@@ -78,7 +82,9 @@ class Chatroom
      * @param  chatroomId:要查询的聊天室id（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function query($chatroomId)
     {
         if (empty($chatroomId))
@@ -104,7 +110,9 @@ class Chatroom
      * @param  order:加入聊天室的先后顺序， 1 为加入时间正序， 2 为加入时间倒序。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function queryUser($chatroomId, $count, $order)
     {
         if (empty($chatroomId))
@@ -135,7 +143,9 @@ class Chatroom
      * @param  chatroomId:聊天室 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function stopDistributionMessage($chatroomId)
     {
         if (empty($chatroomId))
@@ -159,7 +169,9 @@ class Chatroom
      * @param  chatroomId:聊天室 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function resumeDistributionMessage($chatroomId)
     {
         if (empty($chatroomId))
@@ -184,7 +196,9 @@ class Chatroom
      * @param  minute:禁言时长，以分钟为单位，最大值为43200分钟。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function addGagUser($userId, $chatroomId, $minute)
     {
         if (empty($userId))
@@ -215,7 +229,9 @@ class Chatroom
      * @param  chatroomId:聊天室 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function ListGagUser($chatroomId)
     {
         if (empty($chatroomId))
@@ -240,7 +256,9 @@ class Chatroom
      * @param  chatroomId:聊天室Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function rollbackGagUser($userId, $chatroomId)
     {
         if (empty($userId))
@@ -270,7 +288,9 @@ class Chatroom
      * @param  minute:封禁时长，以分钟为单位，最大值为43200分钟。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function addBlockUser($userId, $chatroomId, $minute)
     {
         if (empty($userId))
@@ -301,7 +321,9 @@ class Chatroom
      * @param  chatroomId:聊天室 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function getListBlockUser($chatroomId)
     {
         if (empty($chatroomId))
@@ -325,7 +347,9 @@ class Chatroom
      * @param  chatroomId:聊天室 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function rollbackBlockUser($userId, $chatroomId)
     {
         if (empty($userId))
@@ -352,7 +376,9 @@ class Chatroom
      * @param  objectName:低优先级的消息类型，每次最多提交 5 个，设置的消息类型最多不超过 20 个。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function addPriority($objectName)
     {
         if (empty($objectName))
@@ -375,7 +401,9 @@ class Chatroom
      * @param  chatroomId:要销毁的聊天室 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function destroy($chatroomId)
     {
         if (empty($chatroomId))
@@ -399,7 +427,9 @@ class Chatroom
      * @param  userId:聊天室 Id。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function addWhiteListUser($chatroomId, $userId)
     {
         if (empty($chatroomId))

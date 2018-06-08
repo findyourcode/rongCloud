@@ -30,7 +30,9 @@ class Message
      * @param  isIncludeSender:发送用户自已是否接收消息，0 表示为不接收，1 表示为接收，默认为 0 不接收。（可选）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function publishPrivate($fromUserId, $toUserId, $objectName, $content, $pushContent = '', $pushData = '', $count = '', $verifyBlacklist, $isPersisted, $isCounted, $isIncludeSender)
     {
         if (empty($fromUserId))
@@ -73,7 +75,9 @@ class Message
      * @param  templateMessage:单聊模版消息。
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function publishTemplate($templateMessage)
     {
         if (empty($templateMessage))
@@ -101,7 +105,9 @@ class Message
      * @param  isCounted:当前版本有新的自定义消息，而老版本没有该自定义消息时，老版本客户端收到消息后是否进行未读消息计数，0 表示为不计数、 1 表示为计数，默认为 1 计数，未读消息数增加 1。（可选）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function PublishSystem($fromUserId, $toUserId, $objectName, $content, $pushContent = '', $pushData = '', $isPersisted, $isCounted)
     {
         if (empty($fromUserId))
@@ -141,7 +147,9 @@ class Message
      * @param  templateMessage:系统模版消息。
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function publishSystemTemplate($templateMessage)
     {
         if (empty($templateMessage))
@@ -169,7 +177,9 @@ class Message
      * @param  isIncludeSender:发送用户自已是否接收消息，0 表示为不接收，1 表示为接收，默认为 0 不接收。（可选）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function publishGroup($fromUserId, $toGroupId, $objectName, $content, $pushContent = '', $pushData = '', $isPersisted, $isCounted, $isIncludeSender)
     {
         if (empty($fromUserId))
@@ -217,7 +227,9 @@ class Message
      * @param  isIncludeSender:发送用户自已是否接收消息，0 表示为不接收，1 表示为接收，默认为 0 不接收。（可选）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function publishDiscussion($fromUserId, $toDiscussionId, $objectName, $content, $pushContent = '', $pushData = '', $isPersisted, $isCounted, $isIncludeSender)
     {
         if (empty($fromUserId))
@@ -259,7 +271,9 @@ class Message
      * @param  txtMessage:发送消息内容（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function publishChatroom($fromUserId, $toChatroomId, $objectName, $content)
     {
         if (empty($fromUserId))
@@ -298,7 +312,9 @@ class Message
      * @param  os:针对操作系统发送 Push，值为 iOS 表示对 iOS 手机用户发送 Push ,为 Android 时表示对 Android 手机用户发送 Push ，如对所有用户发送 Push 信息，则不需要传 os 参数。（可选）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function broadcast($fromUserId, $objectName, $content, $pushContent = '', $pushData = '', $os = '')
     {
         if (empty($fromUserId))
@@ -332,7 +348,9 @@ class Message
      * @param  date:指定北京时间某天某小时，格式为2014010101,表示：2014年1月1日凌晨1点。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function getHistory($date)
     {
         if (empty($date))
@@ -355,7 +373,9 @@ class Message
      * @param  date:指定北京时间某天某小时，格式为2014010101,表示：2014年1月1日凌晨1点。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function deleteMessage($date)
     {
         if (empty($date))

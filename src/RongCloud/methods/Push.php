@@ -21,7 +21,9 @@ class Push
      * @param  userTag:用户标签。
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function setUserPushTag($userTag)
     {
         if (empty($userTag))
@@ -43,7 +45,9 @@ class Push
      * @param  pushMessage:json数据
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function broadcastPush($pushMessage)
     {
         if (empty($pushMessage))

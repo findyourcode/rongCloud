@@ -21,7 +21,9 @@ class SMS
      * @param  appKey:应用Id
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function getImageCode($appKey)
     {
         if (empty($appKey))
@@ -48,7 +50,9 @@ class SMS
      * @param  verifyCode:图片验证码，开启图片验证功能后此参数必传，否则可以不传。
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function sendCode($mobile, $templateId, $region, $verifyId = '', $verifyCode = '')
     {
         if (empty($mobile))
@@ -83,7 +87,9 @@ class SMS
      * @param  code:短信验证码内容。（必传）
      *
      * @return $json
-     **/
+     *
+     * @throws Exception
+     */
     public function verifyCode($sessionId, $code)
     {
         if (empty($sessionId))
